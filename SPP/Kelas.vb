@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Kelas
+Public Class FormKelas
     Dim con As MySqlConnection
     Dim cmd As MySqlCommand
     Dim da As MySqlDataAdapter
@@ -7,9 +7,11 @@ Public Class Kelas
     Dim ds As DataSet
     Dim myDB As String
     Sub koneksi()
-        myDB = "Database=project;Server=localhost;uid=root"
+        myDB = "Database=project;Server=localhost;uid=root;password="
         con = New MySqlConnection(myDB)
-        If con.State = ConnectionState.Closed Then con.Open()
+        If con.State = ConnectionState.Closed Then
+            con.Open()
+        End If
     End Sub
     Sub kondisiawal()
         tb_kodeKelas.Text = ""
@@ -30,10 +32,10 @@ Public Class Kelas
 
         Call koneksi()
 
-        da = New MySqlDataAdapter("select * from kelas", con)
+        da = New MySqlDataAdapter("select * from tbkelas", con)
         ds = New DataSet
         da.Fill(ds)
-        dgvKelas.DataSource = ds.Tables("kelas")
+        dgvKelas.DataSource = ds.Tables("tbkelas")
 
     End Sub
     Private Sub Kelas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -60,7 +62,7 @@ Public Class Kelas
             Else
                 Call koneksi()
 
-                Dim inputdata As String = "insert into kelas values('" & tb_kodeKelas.Text & "','" & tb_namaKelas.Text & "')"
+                Dim inputdata As String = "insert into tbkelas values('" & tb_kodeKelas.Text & "','" & tb_namaKelas.Text & "')"
                 cmd = New MySqlCommand(inputdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -75,7 +77,7 @@ Public Class Kelas
         If e.KeyChar = Chr(13) Then
             Call koneksi()
 
-            cmd = New MySqlCommand("select * from kelas where kode_kelas ='" & tb_kodeKelas.Text & "'", con)
+            cmd = New MySqlCommand("select * from tbkelas where kode_kelas ='" & tb_kodeKelas.Text & "'", con)
             dr = cmd.ExecuteReader
             dr.Read()
             If dr.HasRows Then
@@ -101,7 +103,7 @@ Public Class Kelas
                 MsgBox("Pastikan semua kolom terisi penuh")
             Else
                 Call koneksi()
-                Dim editdata As String = "Update kelas set kode_kelas ='" & tb_kodeKelas.Text & "', nama_kelas = '" & tb_namaKelas.Text & "'"
+                Dim editdata As String = "Update tbkelas set kode_kelas ='" & tb_kodeKelas.Text & "', nama_kelas = '" & tb_namaKelas.Text & "'"
                 cmd = New MySqlCommand(editdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -123,7 +125,7 @@ Public Class Kelas
                 MsgBox("Pastika data yang akan dihapus terisi")
             Else
                 Call koneksi()
-                Dim hapusdata As String = "Delete * from kelas where kode_kelas = '" & tb_kodeKelas.Text & "'"
+                Dim hapusdata As String = "Delete * from tbkelas where kode_kelas = '" & tb_kodeKelas.Text & "'"
                 cmd = New MySqlCommand(hapusdata, con)
                 cmd.ExecuteNonQuery()
 

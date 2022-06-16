@@ -1,3 +1,3 @@
-﻿Public Class SPP
+﻿Public Class FormSPP
 
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class SPP
+Partial Class FormSPP
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -346,7 +346,7 @@ Partial Class SPP
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = True
         '
-        'SPP
+        'FormSPP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -359,7 +359,7 @@ Partial Class SPP
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.tb_pencarian)
-        Me.Name = "SPP"
+        Me.Name = "FormSPP"
         Me.Text = "SPP"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

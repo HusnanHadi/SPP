@@ -1,3 +1,3 @@
-﻿Public Class Siswa
+﻿Public Class FormSiswa
 
 End Class
