@@ -29,7 +29,6 @@ Partial Class FormLogin
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tb_password = New System.Windows.Forms.TextBox()
         Me.cb_tmplPassword = New System.Windows.Forms.CheckBox()
-        Me.btn_batal = New System.Windows.Forms.Button()
         Me.btn_keluar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -52,12 +51,13 @@ Partial Class FormLogin
         '
         'btn_login
         '
+        Me.btn_login.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_login.Location = New System.Drawing.Point(124, 232)
         Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(173, 30)
-        Me.btn_login.TabIndex = 2
+        Me.btn_login.Size = New System.Drawing.Size(173, 40)
+        Me.btn_login.TabIndex = 4
         Me.btn_login.Text = "Login"
-        Me.btn_login.UseVisualStyleBackColor = True
+        Me.btn_login.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -81,8 +81,9 @@ Partial Class FormLogin
         '
         Me.tb_password.Location = New System.Drawing.Point(124, 169)
         Me.tb_password.Name = "tb_password"
+        Me.tb_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tb_password.Size = New System.Drawing.Size(173, 26)
-        Me.tb_password.TabIndex = 1
+        Me.tb_password.TabIndex = 2
         '
         'cb_tmplPassword
         '
@@ -94,32 +95,24 @@ Partial Class FormLogin
         Me.cb_tmplPassword.Text = "Tampilkan Password"
         Me.cb_tmplPassword.UseVisualStyleBackColor = True
         '
-        'btn_batal
-        '
-        Me.btn_batal.Location = New System.Drawing.Point(124, 268)
-        Me.btn_batal.Name = "btn_batal"
-        Me.btn_batal.Size = New System.Drawing.Size(173, 30)
-        Me.btn_batal.TabIndex = 2
-        Me.btn_batal.Text = "Batal"
-        Me.btn_batal.UseVisualStyleBackColor = True
-        '
         'btn_keluar
         '
-        Me.btn_keluar.Location = New System.Drawing.Point(124, 304)
+        Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_keluar.Location = New System.Drawing.Point(124, 278)
         Me.btn_keluar.Name = "btn_keluar"
-        Me.btn_keluar.Size = New System.Drawing.Size(173, 30)
-        Me.btn_keluar.TabIndex = 2
+        Me.btn_keluar.Size = New System.Drawing.Size(173, 40)
+        Me.btn_keluar.TabIndex = 5
         Me.btn_keluar.Text = "Keluar"
-        Me.btn_keluar.UseVisualStyleBackColor = True
+        Me.btn_keluar.UseVisualStyleBackColor = False
         '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(416, 378)
         Me.Controls.Add(Me.cb_tmplPassword)
         Me.Controls.Add(Me.btn_keluar)
-        Me.Controls.Add(Me.btn_batal)
         Me.Controls.Add(Me.btn_login)
         Me.Controls.Add(Me.tb_password)
         Me.Controls.Add(Me.tb_username)
@@ -127,6 +120,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -140,6 +134,5 @@ Partial Class FormLogin
     Friend WithEvents Label3 As Label
     Friend WithEvents tb_password As TextBox
     Friend WithEvents cb_tmplPassword As CheckBox
-    Friend WithEvents btn_batal As Button
     Friend WithEvents btn_keluar As Button
 End Class

@@ -31,12 +31,12 @@ Public Class FormKelas
         btn_keluar.Enabled = True
 
         Call koneksi()
-
+        ModuleSPP.OpenConnection()
         da = New MySqlDataAdapter("select * from tbkelas", con)
         ds = New DataSet
         da.Fill(ds)
-        dgvKelas.DataSource = ds.Tables("tbkelas")
-
+        dgvKelas.DataSource = ds.Tables(0)
+        ModuleSPP.CloseConnection()
     End Sub
     Private Sub Kelas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call kondisiawal()
@@ -115,6 +115,7 @@ Public Class FormKelas
 
     Private Sub Btn_hapus_Click(sender As Object, e As EventArgs) Handles btn_hapus.Click
         If btn_hapus.Text = "Hapus" Then
+            btn_hapus.Text = "Delete"
             btn_simpan.Enabled = False
             btn_edit.Enabled = False
             btn_keluar.Text = "Batal"
@@ -125,7 +126,7 @@ Public Class FormKelas
                 MsgBox("Pastika data yang akan dihapus terisi")
             Else
                 Call koneksi()
-                Dim hapusdata As String = "Delete * from tbkelas where kode_kelas = '" & tb_kodeKelas.Text & "'"
+                Dim hapusdata As String = "Delete from tbkelas where kode_kelas = '" & tb_kodeKelas.Text & "'"
                 cmd = New MySqlCommand(hapusdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -142,5 +143,10 @@ Public Class FormKelas
         Else
             Call kondisiawal()
         End If
+    End Sub
+
+    Private Sub dgvKelas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvKelas.CellClick
+        tb_kodeKelas.Text = dgvKelas.Rows(e.RowIndex).Cells(0).Value
+        tb_namaKelas.Text = dgvKelas.Rows(e.RowIndex).Cells(1).Value
     End Sub
 End Class

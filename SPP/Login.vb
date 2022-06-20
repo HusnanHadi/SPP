@@ -23,4 +23,30 @@
             End If
         End If
     End Sub
+
+    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        tb_username.MaxLength = 10
+        tb_password.PasswordChar = "*"
+        tb_username.Clear()
+        tb_password.Clear()
+        tb_username.Focus()
+    End Sub
+
+    Private Sub Cb_tmplPassword_CheckedChanged(sender As Object, e As EventArgs) Handles cb_tmplPassword.CheckedChanged
+        If cb_tmplPassword.Checked = True Then
+            tb_password.PasswordChar = ""
+        Else
+            tb_password.PasswordChar = "*"
+        End If
+    End Sub
+
+    Private Sub Btn_keluar_Click(sender As Object, e As EventArgs) Handles btn_keluar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub tb_password_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_password.KeyPress
+        If e.KeyChar = Chr(13) Then
+            btn_login.Focus()
+        End If
+    End Sub
 End Class

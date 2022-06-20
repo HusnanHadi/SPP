@@ -60,6 +60,7 @@ Partial Class FormSPP
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Label10)
@@ -296,12 +297,13 @@ Partial Class FormSPP
         '
         'btn_simpan
         '
+        Me.btn_simpan.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_simpan.Location = New System.Drawing.Point(363, 394)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(103, 46)
         Me.btn_simpan.TabIndex = 5
         Me.btn_simpan.Text = "Simpan"
-        Me.btn_simpan.UseVisualStyleBackColor = True
+        Me.btn_simpan.UseVisualStyleBackColor = False
         '
         'tb_pencarian
         '
@@ -321,35 +323,39 @@ Partial Class FormSPP
         '
         'btn_edit
         '
+        Me.btn_edit.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_edit.Location = New System.Drawing.Point(472, 394)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(103, 46)
         Me.btn_edit.TabIndex = 5
         Me.btn_edit.Text = "Edit"
-        Me.btn_edit.UseVisualStyleBackColor = True
+        Me.btn_edit.UseVisualStyleBackColor = False
         '
         'btn_hapus
         '
+        Me.btn_hapus.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_hapus.Location = New System.Drawing.Point(581, 394)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(103, 46)
         Me.btn_hapus.TabIndex = 5
         Me.btn_hapus.Text = "Hapus"
-        Me.btn_hapus.UseVisualStyleBackColor = True
+        Me.btn_hapus.UseVisualStyleBackColor = False
         '
         'btn_keluar
         '
+        Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_keluar.Location = New System.Drawing.Point(690, 394)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(103, 46)
         Me.btn_keluar.TabIndex = 5
         Me.btn_keluar.Text = "Keluar"
-        Me.btn_keluar.UseVisualStyleBackColor = True
+        Me.btn_keluar.UseVisualStyleBackColor = False
         '
         'FormSPP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(810, 505)
         Me.Controls.Add(Me.btn_keluar)
         Me.Controls.Add(Me.btn_hapus)
@@ -360,6 +366,7 @@ Partial Class FormSPP
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.tb_pencarian)
         Me.Name = "FormSPP"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SPP"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

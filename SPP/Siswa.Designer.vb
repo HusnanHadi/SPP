@@ -50,6 +50,7 @@ Partial Class FormSiswa
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -71,7 +72,6 @@ Partial Class FormSiswa
         Me.GroupBox1.Size = New System.Drawing.Size(322, 340)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
         '
         'Label8
         '
@@ -215,44 +215,49 @@ Partial Class FormSiswa
         '
         'btn_simpan
         '
+        Me.btn_simpan.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_simpan.Location = New System.Drawing.Point(340, 304)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(109, 48)
         Me.btn_simpan.TabIndex = 5
         Me.btn_simpan.Text = "Simpan"
-        Me.btn_simpan.UseVisualStyleBackColor = True
+        Me.btn_simpan.UseVisualStyleBackColor = False
         '
         'btn_edit
         '
+        Me.btn_edit.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_edit.Location = New System.Drawing.Point(455, 304)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(109, 48)
         Me.btn_edit.TabIndex = 5
         Me.btn_edit.Text = "Edit"
-        Me.btn_edit.UseVisualStyleBackColor = True
+        Me.btn_edit.UseVisualStyleBackColor = False
         '
         'btn_hapus
         '
+        Me.btn_hapus.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_hapus.Location = New System.Drawing.Point(570, 304)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(109, 48)
         Me.btn_hapus.TabIndex = 5
         Me.btn_hapus.Text = "Hapus"
-        Me.btn_hapus.UseVisualStyleBackColor = True
+        Me.btn_hapus.UseVisualStyleBackColor = False
         '
         'btn_keluar
         '
+        Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_keluar.Location = New System.Drawing.Point(685, 304)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(109, 48)
         Me.btn_keluar.TabIndex = 5
         Me.btn_keluar.Text = "Keluar"
-        Me.btn_keluar.UseVisualStyleBackColor = True
+        Me.btn_keluar.UseVisualStyleBackColor = False
         '
         'FormSiswa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(811, 372)
         Me.Controls.Add(Me.btn_keluar)
         Me.Controls.Add(Me.btn_hapus)
@@ -261,6 +266,7 @@ Partial Class FormSiswa
         Me.Controls.Add(Me.dgvSiswa)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FormSiswa"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Siswa"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
