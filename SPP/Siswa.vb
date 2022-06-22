@@ -21,14 +21,16 @@ Public Class FormSiswa
         tb_telpon.Text = ""
         cb_agama.Text = ""
         cb_thAjaran.Text = ""
+        tb_kodeKelas.Text = ""
         tb_nis.Enabled = False
         tb_nama.Enabled = False
         cb_jkelamin.Enabled = False
+        dtp1.Enabled = False
         tb_telpon.Enabled = False
         tb_alamat.Enabled = False
-        dtp1.Enabled = False
         cb_agama.Enabled = False
         cb_thAjaran.Enabled = False
+        tb_kodeKelas.Enabled = False
 
         btn_simpan.Text = "Input"
         btn_edit.Text = "Edit"
@@ -48,20 +50,35 @@ Public Class FormSiswa
         dgvSiswa.DataSource = ds.Tables(0)
         ModuleSPP.CloseConnection()
     End Sub
-
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub FormSiswa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call kondisiawal()
+        cb_agama.Items.Add("Islam")
+        cb_agama.Items.Add("Kristen")
+        cb_agama.Items.Add("Hindu")
+        cb_agama.Items.Add("Budha")
+        cb_agama.Items.Add("Kong Wu Chu")
+
+        cb_jkelamin.Items.Add("Laki-Laki")
+        cb_jkelamin.Items.Add("Perempuan")
+
+        cb_thAjaran.Items.Add("2020")
+        cb_thAjaran.Items.Add("2021")
+        cb_thAjaran.Items.Add("2022")
+        cb_thAjaran.Items.Add("2023")
+        cb_thAjaran.Items.Add("2024")
+        cb_thAjaran.Items.Add("2025")
     End Sub
     Sub fieldaktif()
         tb_nis.Enabled = True
         tb_nama.Enabled = True
         cb_jkelamin.Enabled = True
+        dtp1.Enabled = True
         tb_alamat.Enabled = True
         tb_telpon.Enabled = True
-        dtp1.Enabled = True
-        cb_thAjaran.Enabled = True
         cb_agama.Enabled = True
+        cb_thAjaran.Enabled = True
+        tb_kodeKelas.Enabled = True
+
         tb_nis.Focus()
     End Sub
 
@@ -75,13 +92,12 @@ Public Class FormSiswa
 
             Call fieldaktif()
         Else
-            If tb_nis.Text = "" Or tb_nama.Text = "" Or cb_jkelamin.Text = "" Or tb_alamat.Text = "" Or tb_telpon.Text = "" Or cb_agama.Text = "" Or cb_thAjaran.Text = "" Then
-
+            If tb_nis.Text = "" Or tb_nama.Text = "" Then
                 MsgBox("Pastikan semua kolom terisi")
             Else
                 Call koneksi()
 
-                Dim inputdata As String = "insert into tbsiswa values('" & tb_nis.Text & "','" & tb_nama.Text & "','" & cb_jkelamin.Text & "','" & tb_alamat.Text & "','" & tb_telpon.Text & "','" & cb_agama.Text & "','" & cb_thAjaran.Text & "')"
+                Dim inputdata As String = "insert into tbsiswa values('" & tb_nis.Text & "','" & tb_nama.Text & "','" & cb_jkelamin.Text & "','" & dtp1.Value & "','" & tb_alamat.Text & "','" & tb_telpon.Text & "','" & cb_agama.Text & "','" & cb_thAjaran.Text & "','" & tb_kodeKelas.Text & "')"
                 cmd = New MySqlCommand(inputdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -93,6 +109,39 @@ Public Class FormSiswa
     End Sub
 
     Private Sub tb_nis_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_nis.KeyPress
+        If e.KeyChar = Chr(13) Then
+            Call koneksi()
 
+            cmd = New MySqlCommand("select * from tbsiswa where nis ='" & tb_nis.Text & "'", con)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows Then
+                tb_nis.Text = dr.Item("nis")
+                tb_nama.Text = dr.Item("nama")
+                cb_jkelamin.Text = dr.Item("jenis_kelamin")
+                dtp1.Value = dr.Item("tanggal_lahir")
+                tb_alamat.Text = dr.Item("alamat")
+                tb_telpon.Text = dr.Item("telpon")
+                cb_agama.Text = dr.Item("agama")
+                cb_thAjaran.Text = dr.Item("tahun_ajaran")
+                tb_kodeKelas.Text = dr.Item("Kode_kelas")
+            Else
+                MsgBox("Data tidak ada")
+            End If
+        End If
     End Sub
+
+    Private Sub dgvSiswa_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSiswa.CellClick
+        tb_nis.Text = dgvSiswa.Rows(e.RowIndex).Cells(0).Value
+        tb_nama.Text = dgvSiswa.Rows(e.RowIndex).Cells(1).Value
+        cb_jkelamin.Text = dgvSiswa.Rows(e.RowIndex).Cells(2).Value
+        dtp1.Value = dgvSiswa.Rows(e.RowIndex).Cells(3).Value
+        tb_alamat.Text = dgvSiswa.Rows(e.RowIndex).Cells(4).Value
+        tb_telpon.Text = dgvSiswa.Rows(e.RowIndex).Cells(5).Value
+        cb_agama.Text = dgvSiswa.Rows(e.RowIndex).Cells(6).Value
+        cb_thAjaran.Text = dgvSiswa.Rows(e.RowIndex).Cells(7).Value
+        tb_kodeKelas.Text = dgvSiswa.Rows(e.RowIndex).Cells(8).Value
+    End Sub
+
+
 End Class

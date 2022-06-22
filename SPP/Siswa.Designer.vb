@@ -44,6 +44,8 @@ Partial Class FormSiswa
         Me.btn_edit = New System.Windows.Forms.Button()
         Me.btn_hapus = New System.Windows.Forms.Button()
         Me.btn_keluar = New System.Windows.Forms.Button()
+        Me.tb_kodeKelas = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvSiswa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -53,6 +55,7 @@ Partial Class FormSiswa
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -60,6 +63,7 @@ Partial Class FormSiswa
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.dtp1)
+        Me.GroupBox1.Controls.Add(Me.tb_kodeKelas)
         Me.GroupBox1.Controls.Add(Me.tb_telpon)
         Me.GroupBox1.Controls.Add(Me.tb_alamat)
         Me.GroupBox1.Controls.Add(Me.tb_nama)
@@ -150,28 +154,28 @@ Partial Class FormSiswa
         Me.dtp1.Location = New System.Drawing.Point(134, 127)
         Me.dtp1.Name = "dtp1"
         Me.dtp1.Size = New System.Drawing.Size(182, 26)
-        Me.dtp1.TabIndex = 3
+        Me.dtp1.TabIndex = 4
         '
         'tb_telpon
         '
         Me.tb_telpon.Location = New System.Drawing.Point(134, 191)
         Me.tb_telpon.Name = "tb_telpon"
         Me.tb_telpon.Size = New System.Drawing.Size(182, 26)
-        Me.tb_telpon.TabIndex = 1
+        Me.tb_telpon.TabIndex = 6
         '
         'tb_alamat
         '
         Me.tb_alamat.Location = New System.Drawing.Point(134, 159)
         Me.tb_alamat.Name = "tb_alamat"
         Me.tb_alamat.Size = New System.Drawing.Size(182, 26)
-        Me.tb_alamat.TabIndex = 1
+        Me.tb_alamat.TabIndex = 5
         '
         'tb_nama
         '
         Me.tb_nama.Location = New System.Drawing.Point(134, 61)
         Me.tb_nama.Name = "tb_nama"
         Me.tb_nama.Size = New System.Drawing.Size(182, 26)
-        Me.tb_nama.TabIndex = 1
+        Me.tb_nama.TabIndex = 2
         '
         'cb_thAjaran
         '
@@ -179,7 +183,7 @@ Partial Class FormSiswa
         Me.cb_thAjaran.Location = New System.Drawing.Point(134, 257)
         Me.cb_thAjaran.Name = "cb_thAjaran"
         Me.cb_thAjaran.Size = New System.Drawing.Size(182, 28)
-        Me.cb_thAjaran.TabIndex = 2
+        Me.cb_thAjaran.TabIndex = 8
         '
         'cb_agama
         '
@@ -187,7 +191,7 @@ Partial Class FormSiswa
         Me.cb_agama.Location = New System.Drawing.Point(134, 223)
         Me.cb_agama.Name = "cb_agama"
         Me.cb_agama.Size = New System.Drawing.Size(182, 28)
-        Me.cb_agama.TabIndex = 2
+        Me.cb_agama.TabIndex = 7
         '
         'cb_jkelamin
         '
@@ -195,7 +199,7 @@ Partial Class FormSiswa
         Me.cb_jkelamin.Location = New System.Drawing.Point(134, 93)
         Me.cb_jkelamin.Name = "cb_jkelamin"
         Me.cb_jkelamin.Size = New System.Drawing.Size(182, 28)
-        Me.cb_jkelamin.TabIndex = 2
+        Me.cb_jkelamin.TabIndex = 3
         '
         'tb_nis
         '
@@ -219,7 +223,7 @@ Partial Class FormSiswa
         Me.btn_simpan.Location = New System.Drawing.Point(340, 304)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(109, 48)
-        Me.btn_simpan.TabIndex = 5
+        Me.btn_simpan.TabIndex = 10
         Me.btn_simpan.Text = "Simpan"
         Me.btn_simpan.UseVisualStyleBackColor = False
         '
@@ -229,7 +233,7 @@ Partial Class FormSiswa
         Me.btn_edit.Location = New System.Drawing.Point(455, 304)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(109, 48)
-        Me.btn_edit.TabIndex = 5
+        Me.btn_edit.TabIndex = 11
         Me.btn_edit.Text = "Edit"
         Me.btn_edit.UseVisualStyleBackColor = False
         '
@@ -239,7 +243,7 @@ Partial Class FormSiswa
         Me.btn_hapus.Location = New System.Drawing.Point(570, 304)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(109, 48)
-        Me.btn_hapus.TabIndex = 5
+        Me.btn_hapus.TabIndex = 12
         Me.btn_hapus.Text = "Hapus"
         Me.btn_hapus.UseVisualStyleBackColor = False
         '
@@ -249,9 +253,25 @@ Partial Class FormSiswa
         Me.btn_keluar.Location = New System.Drawing.Point(685, 304)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(109, 48)
-        Me.btn_keluar.TabIndex = 5
+        Me.btn_keluar.TabIndex = 13
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = False
+        '
+        'tb_kodeKelas
+        '
+        Me.tb_kodeKelas.Location = New System.Drawing.Point(134, 292)
+        Me.tb_kodeKelas.Name = "tb_kodeKelas"
+        Me.tb_kodeKelas.Size = New System.Drawing.Size(182, 26)
+        Me.tb_kodeKelas.TabIndex = 9
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 295)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(89, 20)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Kode Kelas"
         '
         'FormSiswa
         '
@@ -297,4 +317,6 @@ Partial Class FormSiswa
     Friend WithEvents btn_edit As Button
     Friend WithEvents btn_hapus As Button
     Friend WithEvents btn_keluar As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents tb_kodeKelas As TextBox
 End Class
