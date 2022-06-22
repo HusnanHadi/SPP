@@ -367,7 +367,7 @@ Partial Class FormSPP
         Me.Controls.Add(Me.tb_pencarian)
         Me.Name = "FormSPP"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "SPP"
+        Me.Text = " "
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvSPP, System.ComponentModel.ISupportInitialize).EndInit()

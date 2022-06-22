@@ -103,9 +103,10 @@ Public Class FormKelas
                 MsgBox("Pastikan semua kolom terisi penuh")
             Else
                 Call koneksi()
-                Dim editdata As String = "Update tbkelas set kode_kelas ='" & tb_kodeKelas.Text & "', nama_kelas = '" & tb_namaKelas.Text & "'"
+                Dim editdata As String = "Update tbkelas set nama_kelas ='" & tb_namaKelas.Text & "' Where kode_kelas = '" & tb_kodeKelas.Text & "'"
                 cmd = New MySqlCommand(editdata, con)
                 cmd.ExecuteNonQuery()
+
 
                 MsgBox("Edit data berhasil")
                 Call kondisiawal()

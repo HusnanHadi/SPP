@@ -25,6 +25,7 @@ Partial Class FormSiswa
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -32,6 +33,7 @@ Partial Class FormSiswa
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dtp1 = New System.Windows.Forms.DateTimePicker()
+        Me.tb_kodeKelas = New System.Windows.Forms.TextBox()
         Me.tb_telpon = New System.Windows.Forms.TextBox()
         Me.tb_alamat = New System.Windows.Forms.TextBox()
         Me.tb_nama = New System.Windows.Forms.TextBox()
@@ -44,8 +46,6 @@ Partial Class FormSiswa
         Me.btn_edit = New System.Windows.Forms.Button()
         Me.btn_hapus = New System.Windows.Forms.Button()
         Me.btn_keluar = New System.Windows.Forms.Button()
-        Me.tb_kodeKelas = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvSiswa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -94,6 +94,15 @@ Partial Class FormSiswa
         Me.Label7.Size = New System.Drawing.Size(60, 20)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Agama"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 295)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(89, 20)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Kode Kelas"
         '
         'Label6
         '
@@ -155,6 +164,13 @@ Partial Class FormSiswa
         Me.dtp1.Name = "dtp1"
         Me.dtp1.Size = New System.Drawing.Size(182, 26)
         Me.dtp1.TabIndex = 4
+        '
+        'tb_kodeKelas
+        '
+        Me.tb_kodeKelas.Location = New System.Drawing.Point(134, 292)
+        Me.tb_kodeKelas.Name = "tb_kodeKelas"
+        Me.tb_kodeKelas.Size = New System.Drawing.Size(182, 26)
+        Me.tb_kodeKelas.TabIndex = 9
         '
         'tb_telpon
         '
@@ -256,22 +272,6 @@ Partial Class FormSiswa
         Me.btn_keluar.TabIndex = 13
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = False
-        '
-        'tb_kodeKelas
-        '
-        Me.tb_kodeKelas.Location = New System.Drawing.Point(134, 292)
-        Me.tb_kodeKelas.Name = "tb_kodeKelas"
-        Me.tb_kodeKelas.Size = New System.Drawing.Size(182, 26)
-        Me.tb_kodeKelas.TabIndex = 9
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 295)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(89, 20)
-        Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Kode Kelas"
         '
         'FormSiswa
         '

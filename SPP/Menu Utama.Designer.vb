@@ -59,13 +59,13 @@ Partial Class Form_MenuUtama
         'logout
         '
         Me.logout.Name = "logout"
-        Me.logout.Size = New System.Drawing.Size(252, 30)
+        Me.logout.Size = New System.Drawing.Size(153, 30)
         Me.logout.Text = "Logout"
         '
         'login
         '
         Me.login.Name = "login"
-        Me.login.Size = New System.Drawing.Size(252, 30)
+        Me.login.Size = New System.Drawing.Size(153, 30)
         Me.login.Text = "Login"
         '
         'data_master
@@ -78,13 +78,13 @@ Partial Class Form_MenuUtama
         'siswa
         '
         Me.siswa.Name = "siswa"
-        Me.siswa.Size = New System.Drawing.Size(140, 30)
+        Me.siswa.Size = New System.Drawing.Size(252, 30)
         Me.siswa.Text = "Siswa"
         '
         'kelas
         '
         Me.kelas.Name = "kelas"
-        Me.kelas.Size = New System.Drawing.Size(140, 30)
+        Me.kelas.Size = New System.Drawing.Size(252, 30)
         Me.kelas.Text = "Kelas"
         '
         'data_transaksi
@@ -97,7 +97,7 @@ Partial Class Form_MenuUtama
         'pembayaran
         '
         Me.pembayaran.Name = "pembayaran"
-        Me.pembayaran.Size = New System.Drawing.Size(193, 30)
+        Me.pembayaran.Size = New System.Drawing.Size(252, 30)
         Me.pembayaran.Text = "Pembayaran"
         '
         'laporan
@@ -130,7 +130,7 @@ Partial Class Form_MenuUtama
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(911, 480)
+        Me.ClientSize = New System.Drawing.Size(911, 479)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form_MenuUtama"

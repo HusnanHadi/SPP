@@ -97,7 +97,7 @@ Public Class FormSiswa
             Else
                 Call koneksi()
 
-                Dim inputdata As String = "insert into tbsiswa values('" & tb_nis.Text & "','" & tb_nama.Text & "','" & cb_jkelamin.Text & "','" & dtp1.Value & "','" & tb_alamat.Text & "','" & tb_telpon.Text & "','" & cb_agama.Text & "','" & cb_thAjaran.Text & "','" & tb_kodeKelas.Text & "')"
+                Dim inputdata As String = "insert into tbsiswa values('" & tb_nis.Text & "','" & tb_nama.Text & "','" & cb_jkelamin.Text & "','" & Format(dtp1.Value, "yyyy-MM-dd") & "','" & tb_alamat.Text & "','" & tb_telpon.Text & "','" & cb_agama.Text & "','" & cb_thAjaran.Text & "','" & tb_kodeKelas.Text & "')"
                 cmd = New MySqlCommand(inputdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -143,5 +143,59 @@ Public Class FormSiswa
         tb_kodeKelas.Text = dgvSiswa.Rows(e.RowIndex).Cells(8).Value
     End Sub
 
+    Private Sub Btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
+        If btn_edit.Text = "Edit" Then
+            btn_edit.Text = "Update"
 
+            btn_simpan.Enabled = False
+            btn_hapus.Enabled = False
+            btn_keluar.Text = "Batal"
+
+            Call fieldaktif()
+        Else
+            If tb_nis.Text = "" Or tb_nama.Text = "" Then
+                MsgBox("Pastikan semua kolom terisi penuh")
+            Else
+                Call koneksi()
+                Dim editdata As String = "Update tbsiswa set nama ='" & tb_nama.Text & "', jenis_kelamin ='" & cb_jkelamin.Text & "', tanggal_lahir ='" & Format(dtp1.Value, ("yyyy-MM-dd")) & "', alamat ='" & tb_alamat.Text & "', telpon ='" & tb_telpon.Text & "', agama ='" & cb_agama.Text & "', tahun_ajaran ='" & cb_thAjaran.Text & "', kode_kelas ='" & tb_kodeKelas.Text & "' Where nis ='" & tb_nis.Text & "'"
+                cmd = New MySqlCommand(editdata, con)
+                cmd.ExecuteNonQuery()
+
+                MsgBox("Edit data berhasil")
+                Call kondisiawal()
+            End If
+        End If
+    End Sub
+
+    Private Sub Btn_hapus_Click(sender As Object, e As EventArgs) Handles btn_hapus.Click
+        If btn_hapus.Text = "Hapus" Then
+            btn_hapus.Text = "Delete"
+            btn_simpan.Enabled = False
+            btn_edit.Enabled = False
+            btn_keluar.Text = "Batal"
+
+            Call fieldaktif()
+        Else
+            If tb_nis.Text = "" Or tb_nama.Text = "" Then
+                MsgBox("Pastika data yang akan dihapus terisi")
+            Else
+                Call koneksi()
+                Dim hapusdata As String = "Delete from tbsiswa where nis = '" & tb_nis.Text & "'"
+                cmd = New MySqlCommand(hapusdata, con)
+                cmd.ExecuteNonQuery()
+
+                MsgBox("Hapus data berhasil")
+
+                Call kondisiawal()
+            End If
+        End If
+    End Sub
+
+    Private Sub Btn_keluar_Click(sender As Object, e As EventArgs) Handles btn_keluar.Click
+        If btn_keluar.Text = "Keluar" Then
+            Me.Close()
+        Else
+            Call kondisiawal()
+        End If
+    End Sub
 End Class
