@@ -29,19 +29,17 @@ Partial Class FormKelas
         Me.tb_namaKelas = New System.Windows.Forms.TextBox()
         Me.tb_kodeKelas = New System.Windows.Forms.TextBox()
         Me.dgvKelas = New System.Windows.Forms.DataGridView()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btn_keluar = New System.Windows.Forms.Button()
         Me.btn_hapus = New System.Windows.Forms.Button()
         Me.btn_edit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvKelas, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_simpan
         '
         Me.btn_simpan.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_simpan.Location = New System.Drawing.Point(6, 42)
+        Me.btn_simpan.Location = New System.Drawing.Point(12, 299)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(163, 40)
         Me.btn_simpan.TabIndex = 4
@@ -97,32 +95,20 @@ Partial Class FormKelas
         '
         Me.dgvKelas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvKelas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvKelas.BackgroundColor = System.Drawing.SystemColors.HighlightText
         Me.dgvKelas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvKelas.GridColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.dgvKelas.Location = New System.Drawing.Point(12, 119)
         Me.dgvKelas.Name = "dgvKelas"
         Me.dgvKelas.RowTemplate.Height = 28
-        Me.dgvKelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgvKelas.Size = New System.Drawing.Size(425, 174)
+        Me.dgvKelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvKelas.Size = New System.Drawing.Size(501, 174)
         Me.dgvKelas.TabIndex = 3
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.GroupBox2.Controls.Add(Me.btn_keluar)
-        Me.GroupBox2.Controls.Add(Me.btn_hapus)
-        Me.GroupBox2.Controls.Add(Me.btn_edit)
-        Me.GroupBox2.Controls.Add(Me.btn_simpan)
-        Me.GroupBox2.Location = New System.Drawing.Point(443, 12)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(175, 280)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "NAVIGATOR"
         '
         'btn_keluar
         '
         Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_keluar.Location = New System.Drawing.Point(6, 180)
+        Me.btn_keluar.Location = New System.Drawing.Point(181, 345)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(163, 40)
         Me.btn_keluar.TabIndex = 7
@@ -132,7 +118,7 @@ Partial Class FormKelas
         'btn_hapus
         '
         Me.btn_hapus.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_hapus.Location = New System.Drawing.Point(6, 134)
+        Me.btn_hapus.Location = New System.Drawing.Point(350, 299)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(163, 40)
         Me.btn_hapus.TabIndex = 6
@@ -142,7 +128,7 @@ Partial Class FormKelas
         'btn_edit
         '
         Me.btn_edit.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_edit.Location = New System.Drawing.Point(6, 88)
+        Me.btn_edit.Location = New System.Drawing.Point(181, 299)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(163, 40)
         Me.btn_edit.TabIndex = 5
@@ -154,9 +140,12 @@ Partial Class FormKelas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(630, 311)
+        Me.ClientSize = New System.Drawing.Size(526, 407)
+        Me.Controls.Add(Me.btn_keluar)
         Me.Controls.Add(Me.dgvKelas)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.btn_hapus)
+        Me.Controls.Add(Me.btn_edit)
+        Me.Controls.Add(Me.btn_simpan)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FormKelas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -164,7 +153,6 @@ Partial Class FormKelas
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvKelas, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -176,7 +164,6 @@ Partial Class FormKelas
     Friend WithEvents tb_namaKelas As TextBox
     Friend WithEvents tb_kodeKelas As TextBox
     Friend WithEvents dgvKelas As DataGridView
-    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btn_keluar As Button
     Friend WithEvents btn_hapus As Button
     Friend WithEvents btn_edit As Button

@@ -17,6 +17,7 @@ Public Class FormSiswa
         tb_nis.Text = ""
         tb_nama.Text = ""
         cb_jkelamin.Text = ""
+        dtp1.ResetText()
         tb_alamat.Text = ""
         tb_telpon.Text = ""
         cb_agama.Text = ""
@@ -51,7 +52,7 @@ Public Class FormSiswa
         ModuleSPP.CloseConnection()
     End Sub
     Private Sub FormSiswa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call kondisiawal()
+
         cb_agama.Items.Add("Islam")
         cb_agama.Items.Add("Kristen")
         cb_agama.Items.Add("Hindu")
@@ -67,6 +68,7 @@ Public Class FormSiswa
         cb_thAjaran.Items.Add("2023")
         cb_thAjaran.Items.Add("2024")
         cb_thAjaran.Items.Add("2025")
+        Call kondisiawal()
     End Sub
     Sub fieldaktif()
         tb_nis.Enabled = True
@@ -92,7 +94,7 @@ Public Class FormSiswa
 
             Call fieldaktif()
         Else
-            If tb_nis.Text = "" Or tb_nama.Text = "" Then
+            If tb_nis.Text = "" Or tb_nama.Text = "" Or cb_jkelamin.Text = "" Or tb_alamat.Text = "" Or tb_telpon.Text = "" Or cb_agama.Text = "" Or cb_thAjaran.Text = "" Or tb_kodeKelas.Text = "" Then
                 MsgBox("Pastikan semua kolom terisi")
             Else
                 Call koneksi()
@@ -117,7 +119,7 @@ Public Class FormSiswa
             dr.Read()
             If dr.HasRows Then
                 tb_nis.Text = dr.Item("nis")
-                tb_nama.Text = dr.Item("nama")
+                tb_nama.Text = dr.Item("nama_siswa")
                 cb_jkelamin.Text = dr.Item("jenis_kelamin")
                 dtp1.Value = dr.Item("tanggal_lahir")
                 tb_alamat.Text = dr.Item("alamat")
@@ -157,7 +159,7 @@ Public Class FormSiswa
                 MsgBox("Pastikan semua kolom terisi penuh")
             Else
                 Call koneksi()
-                Dim editdata As String = "Update tbsiswa set nama ='" & tb_nama.Text & "', jenis_kelamin ='" & cb_jkelamin.Text & "', tanggal_lahir ='" & Format(dtp1.Value, ("yyyy-MM-dd")) & "', alamat ='" & tb_alamat.Text & "', telpon ='" & tb_telpon.Text & "', agama ='" & cb_agama.Text & "', tahun_ajaran ='" & cb_thAjaran.Text & "', kode_kelas ='" & tb_kodeKelas.Text & "' Where nis ='" & tb_nis.Text & "'"
+                Dim editdata As String = "Update tbsiswa set nama_siswa ='" & tb_nama.Text & "', jenis_kelamin ='" & cb_jkelamin.Text & "', tanggal_lahir ='" & Format(dtp1.Value, ("yyyy-MM-dd")) & "', alamat ='" & tb_alamat.Text & "', telpon ='" & tb_telpon.Text & "', agama ='" & cb_agama.Text & "', tahun_ajaran ='" & cb_thAjaran.Text & "', kode_kelas ='" & tb_kodeKelas.Text & "' Where nis ='" & tb_nis.Text & "'"
                 cmd = New MySqlCommand(editdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -196,6 +198,27 @@ Public Class FormSiswa
             Me.Close()
         Else
             Call kondisiawal()
+        End If
+    End Sub
+
+    Private Sub Btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
+        Call koneksi()
+        cmd = New MySqlCommand("select * from tbsiswa where nama_siswa like '%" & tb_cari.Text & "%'", con)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows Then
+            Call koneksi()
+            da = New MySqlDataAdapter("select * from tbsiswa where nama_siswa like '%" & tb_cari.Text & "%'", con)
+            ds = New DataSet
+            da.Fill(ds, "DataKetemu")
+            dgvSiswa.DataSource = ds.Tables("DataKetemu")
+            dgvSiswa.ReadOnly = True
+        End If
+    End Sub
+
+    Private Sub tb_cari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_cari.KeyPress
+        If e.KeyChar = Chr(13) Then
+            btn_cari.PerformClick()
         End If
     End Sub
 End Class

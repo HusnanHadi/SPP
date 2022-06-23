@@ -46,6 +46,9 @@ Partial Class FormSiswa
         Me.btn_edit = New System.Windows.Forms.Button()
         Me.btn_hapus = New System.Windows.Forms.Button()
         Me.btn_keluar = New System.Windows.Forms.Button()
+        Me.btn_cari = New System.Windows.Forms.Button()
+        Me.tb_cari = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvSiswa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -226,11 +229,14 @@ Partial Class FormSiswa
         '
         'dgvSiswa
         '
+        Me.dgvSiswa.BackgroundColor = System.Drawing.SystemColors.HighlightText
         Me.dgvSiswa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSiswa.Location = New System.Drawing.Point(340, 12)
+        Me.dgvSiswa.GridColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.dgvSiswa.Location = New System.Drawing.Point(340, 53)
         Me.dgvSiswa.Name = "dgvSiswa"
         Me.dgvSiswa.RowTemplate.Height = 28
-        Me.dgvSiswa.Size = New System.Drawing.Size(454, 286)
+        Me.dgvSiswa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvSiswa.Size = New System.Drawing.Size(665, 245)
         Me.dgvSiswa.TabIndex = 4
         '
         'btn_simpan
@@ -273,12 +279,41 @@ Partial Class FormSiswa
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = False
         '
+        'btn_cari
+        '
+        Me.btn_cari.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_cari.Location = New System.Drawing.Point(595, 12)
+        Me.btn_cari.Name = "btn_cari"
+        Me.btn_cari.Size = New System.Drawing.Size(75, 34)
+        Me.btn_cari.TabIndex = 14
+        Me.btn_cari.Text = "Cari"
+        Me.btn_cari.UseVisualStyleBackColor = False
+        '
+        'tb_cari
+        '
+        Me.tb_cari.Location = New System.Drawing.Point(422, 16)
+        Me.tb_cari.Name = "tb_cari"
+        Me.tb_cari.Size = New System.Drawing.Size(167, 26)
+        Me.tb_cari.TabIndex = 15
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(340, 19)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(76, 20)
+        Me.Label10.TabIndex = 16
+        Me.Label10.Text = "Cari Data"
+        '
         'FormSiswa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(811, 372)
+        Me.ClientSize = New System.Drawing.Size(1017, 372)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.tb_cari)
+        Me.Controls.Add(Me.btn_cari)
         Me.Controls.Add(Me.btn_keluar)
         Me.Controls.Add(Me.btn_hapus)
         Me.Controls.Add(Me.btn_edit)
@@ -292,6 +327,7 @@ Partial Class FormSiswa
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvSiswa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -319,4 +355,7 @@ Partial Class FormSiswa
     Friend WithEvents btn_keluar As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents tb_kodeKelas As TextBox
+    Friend WithEvents btn_cari As Button
+    Friend WithEvents tb_cari As TextBox
+    Friend WithEvents Label10 As Label
 End Class

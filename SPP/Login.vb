@@ -46,7 +46,7 @@
 
     Private Sub tb_password_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_password.KeyPress
         If e.KeyChar = Chr(13) Then
-            btn_login.Focus()
+            btn_login.PerformClick()
         End If
     End Sub
 End Class
