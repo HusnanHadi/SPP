@@ -83,86 +83,96 @@ Partial Class FormSiswa
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(6, 260)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(104, 20)
+        Me.Label8.Size = New System.Drawing.Size(89, 19)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Tahun Ajaran"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(6, 226)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(60, 20)
+        Me.Label7.Size = New System.Drawing.Size(52, 19)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Agama"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(6, 295)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(89, 20)
+        Me.Label9.Size = New System.Drawing.Size(83, 19)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Kode Kelas"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(6, 194)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 20)
+        Me.Label6.Size = New System.Drawing.Size(50, 19)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Telpon"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(6, 162)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(59, 20)
+        Me.Label5.Size = New System.Drawing.Size(52, 19)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Alamat"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(6, 132)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(105, 20)
+        Me.Label4.Size = New System.Drawing.Size(90, 19)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Tanggal Lahir"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(6, 96)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 20)
+        Me.Label3.Size = New System.Drawing.Size(92, 19)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Jenis Kelamin"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 64)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 20)
+        Me.Label2.Size = New System.Drawing.Size(46, 19)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Nama"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(36, 20)
+        Me.Label1.Size = New System.Drawing.Size(35, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "NIS"
         '
         'dtp1
         '
+        Me.dtp1.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtp1.Location = New System.Drawing.Point(134, 127)
         Me.dtp1.Name = "dtp1"
         Me.dtp1.Size = New System.Drawing.Size(182, 26)
@@ -170,6 +180,7 @@ Partial Class FormSiswa
         '
         'tb_kodeKelas
         '
+        Me.tb_kodeKelas.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_kodeKelas.Location = New System.Drawing.Point(134, 292)
         Me.tb_kodeKelas.Name = "tb_kodeKelas"
         Me.tb_kodeKelas.Size = New System.Drawing.Size(182, 26)
@@ -177,6 +188,7 @@ Partial Class FormSiswa
         '
         'tb_telpon
         '
+        Me.tb_telpon.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_telpon.Location = New System.Drawing.Point(134, 191)
         Me.tb_telpon.Name = "tb_telpon"
         Me.tb_telpon.Size = New System.Drawing.Size(182, 26)
@@ -184,6 +196,7 @@ Partial Class FormSiswa
         '
         'tb_alamat
         '
+        Me.tb_alamat.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_alamat.Location = New System.Drawing.Point(134, 159)
         Me.tb_alamat.Name = "tb_alamat"
         Me.tb_alamat.Size = New System.Drawing.Size(182, 26)
@@ -191,6 +204,7 @@ Partial Class FormSiswa
         '
         'tb_nama
         '
+        Me.tb_nama.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_nama.Location = New System.Drawing.Point(134, 61)
         Me.tb_nama.Name = "tb_nama"
         Me.tb_nama.Size = New System.Drawing.Size(182, 26)
@@ -198,30 +212,34 @@ Partial Class FormSiswa
         '
         'cb_thAjaran
         '
+        Me.cb_thAjaran.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_thAjaran.FormattingEnabled = True
         Me.cb_thAjaran.Location = New System.Drawing.Point(134, 257)
         Me.cb_thAjaran.Name = "cb_thAjaran"
-        Me.cb_thAjaran.Size = New System.Drawing.Size(182, 28)
+        Me.cb_thAjaran.Size = New System.Drawing.Size(182, 27)
         Me.cb_thAjaran.TabIndex = 8
         '
         'cb_agama
         '
+        Me.cb_agama.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_agama.FormattingEnabled = True
         Me.cb_agama.Location = New System.Drawing.Point(134, 223)
         Me.cb_agama.Name = "cb_agama"
-        Me.cb_agama.Size = New System.Drawing.Size(182, 28)
+        Me.cb_agama.Size = New System.Drawing.Size(182, 27)
         Me.cb_agama.TabIndex = 7
         '
         'cb_jkelamin
         '
+        Me.cb_jkelamin.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_jkelamin.FormattingEnabled = True
         Me.cb_jkelamin.Location = New System.Drawing.Point(134, 93)
         Me.cb_jkelamin.Name = "cb_jkelamin"
-        Me.cb_jkelamin.Size = New System.Drawing.Size(182, 28)
+        Me.cb_jkelamin.Size = New System.Drawing.Size(182, 27)
         Me.cb_jkelamin.TabIndex = 3
         '
         'tb_nis
         '
+        Me.tb_nis.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_nis.Location = New System.Drawing.Point(134, 29)
         Me.tb_nis.Name = "tb_nis"
         Me.tb_nis.Size = New System.Drawing.Size(182, 26)
@@ -242,6 +260,7 @@ Partial Class FormSiswa
         'btn_simpan
         '
         Me.btn_simpan.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_simpan.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_simpan.Location = New System.Drawing.Point(340, 304)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(109, 48)
@@ -252,6 +271,7 @@ Partial Class FormSiswa
         'btn_edit
         '
         Me.btn_edit.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_edit.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_edit.Location = New System.Drawing.Point(455, 304)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(109, 48)
@@ -262,6 +282,7 @@ Partial Class FormSiswa
         'btn_hapus
         '
         Me.btn_hapus.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_hapus.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_hapus.Location = New System.Drawing.Point(570, 304)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(109, 48)
@@ -272,6 +293,7 @@ Partial Class FormSiswa
         'btn_keluar
         '
         Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_keluar.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_keluar.Location = New System.Drawing.Point(685, 304)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(109, 48)
@@ -282,6 +304,7 @@ Partial Class FormSiswa
         'btn_cari
         '
         Me.btn_cari.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_cari.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cari.Location = New System.Drawing.Point(595, 12)
         Me.btn_cari.Name = "btn_cari"
         Me.btn_cari.Size = New System.Drawing.Size(75, 34)
@@ -291,6 +314,7 @@ Partial Class FormSiswa
         '
         'tb_cari
         '
+        Me.tb_cari.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_cari.Location = New System.Drawing.Point(422, 16)
         Me.tb_cari.Name = "tb_cari"
         Me.tb_cari.Size = New System.Drawing.Size(167, 26)
@@ -299,9 +323,10 @@ Partial Class FormSiswa
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(340, 19)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(76, 20)
+        Me.Label10.Size = New System.Drawing.Size(68, 19)
         Me.Label10.TabIndex = 16
         Me.Label10.Text = "Cari Data"
         '

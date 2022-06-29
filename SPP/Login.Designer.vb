@@ -35,15 +35,16 @@ Partial Class FormLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(52, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(312, 37)
+        Me.Label1.Size = New System.Drawing.Size(311, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "SELAMAT DATANG"
         '
         'tb_username
         '
+        Me.tb_username.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_username.Location = New System.Drawing.Point(124, 117)
         Me.tb_username.Name = "tb_username"
         Me.tb_username.Size = New System.Drawing.Size(173, 26)
@@ -52,6 +53,7 @@ Partial Class FormLogin
         'btn_login
         '
         Me.btn_login.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_login.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_login.Location = New System.Drawing.Point(124, 232)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(173, 40)
@@ -62,23 +64,26 @@ Partial Class FormLogin
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(120, 94)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 20)
+        Me.Label2.Size = New System.Drawing.Size(70, 19)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Username"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(120, 146)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 20)
+        Me.Label3.Size = New System.Drawing.Size(69, 19)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Password"
         '
         'tb_password
         '
+        Me.tb_password.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_password.Location = New System.Drawing.Point(124, 169)
         Me.tb_password.Name = "tb_password"
         Me.tb_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -88,9 +93,10 @@ Partial Class FormLogin
         'cb_tmplPassword
         '
         Me.cb_tmplPassword.AutoSize = True
+        Me.cb_tmplPassword.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_tmplPassword.Location = New System.Drawing.Point(124, 202)
         Me.cb_tmplPassword.Name = "cb_tmplPassword"
-        Me.cb_tmplPassword.Size = New System.Drawing.Size(180, 24)
+        Me.cb_tmplPassword.Size = New System.Drawing.Size(161, 23)
         Me.cb_tmplPassword.TabIndex = 3
         Me.cb_tmplPassword.Text = "Tampilkan Password"
         Me.cb_tmplPassword.UseVisualStyleBackColor = True
@@ -98,6 +104,7 @@ Partial Class FormLogin
         'btn_keluar
         '
         Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_keluar.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_keluar.Location = New System.Drawing.Point(124, 278)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(173, 40)

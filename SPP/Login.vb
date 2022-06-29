@@ -4,7 +4,6 @@
         Form_MenuUtama.logout.Enabled = True
         Form_MenuUtama.data_master.Enabled = True
         Form_MenuUtama.data_transaksi.Enabled = True
-        Form_MenuUtama.laporan.Enabled = True
     End Sub
 
     Private Sub Btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click

@@ -67,41 +67,46 @@ Partial Class FormSPP
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(6, 167)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(105, 20)
+        Me.Label10.Size = New System.Drawing.Size(90, 19)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Jumlah Bayar"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(6, 133)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(85, 20)
+        Me.Label9.Size = New System.Drawing.Size(73, 19)
         Me.Label9.TabIndex = 6
         Me.Label9.Text = "SPP Bulan"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(6, 101)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(36, 20)
+        Me.Label3.Size = New System.Drawing.Size(35, 19)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "NIS"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 71)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(111, 20)
+        Me.Label2.Size = New System.Drawing.Size(95, 19)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Tanggal Bayar"
         '
         'dtp2
         '
+        Me.dtp2.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtp2.Location = New System.Drawing.Point(177, 66)
         Me.dtp2.Name = "dtp2"
         Me.dtp2.Size = New System.Drawing.Size(182, 26)
@@ -109,23 +114,26 @@ Partial Class FormSPP
         '
         'cb_sppBulan
         '
+        Me.cb_sppBulan.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_sppBulan.FormattingEnabled = True
         Me.cb_sppBulan.Location = New System.Drawing.Point(177, 130)
         Me.cb_sppBulan.Name = "cb_sppBulan"
-        Me.cb_sppBulan.Size = New System.Drawing.Size(182, 28)
+        Me.cb_sppBulan.Size = New System.Drawing.Size(182, 27)
         Me.cb_sppBulan.TabIndex = 9
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(122, 20)
+        Me.Label1.Size = New System.Drawing.Size(108, 19)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "No Pembayaran"
         '
         'tb_jmlhBayar
         '
+        Me.tb_jmlhBayar.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_jmlhBayar.Location = New System.Drawing.Point(177, 164)
         Me.tb_jmlhBayar.Name = "tb_jmlhBayar"
         Me.tb_jmlhBayar.Size = New System.Drawing.Size(182, 26)
@@ -133,6 +141,7 @@ Partial Class FormSPP
         '
         'tb_nis
         '
+        Me.tb_nis.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_nis.Location = New System.Drawing.Point(177, 98)
         Me.tb_nis.Name = "tb_nis"
         Me.tb_nis.Size = New System.Drawing.Size(182, 26)
@@ -140,6 +149,7 @@ Partial Class FormSPP
         '
         'tb_noPembayaran
         '
+        Me.tb_noPembayaran.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_noPembayaran.Location = New System.Drawing.Point(177, 34)
         Me.tb_noPembayaran.Name = "tb_noPembayaran"
         Me.tb_noPembayaran.Size = New System.Drawing.Size(182, 26)
@@ -160,6 +170,7 @@ Partial Class FormSPP
         'btn_simpan
         '
         Me.btn_simpan.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_simpan.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_simpan.Location = New System.Drawing.Point(12, 271)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(103, 46)
@@ -169,6 +180,7 @@ Partial Class FormSPP
         '
         'tb_cari
         '
+        Me.tb_cari.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_cari.Location = New System.Drawing.Point(477, 17)
         Me.tb_cari.Name = "tb_cari"
         Me.tb_cari.Size = New System.Drawing.Size(187, 26)
@@ -177,15 +189,17 @@ Partial Class FormSPP
         'Label13
         '
         Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(383, 20)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(76, 20)
+        Me.Label13.Size = New System.Drawing.Size(68, 19)
         Me.Label13.TabIndex = 6
         Me.Label13.Text = "Cari Data"
         '
         'btn_edit
         '
         Me.btn_edit.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_edit.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_edit.Location = New System.Drawing.Point(143, 271)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(103, 46)
@@ -196,6 +210,7 @@ Partial Class FormSPP
         'btn_hapus
         '
         Me.btn_hapus.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_hapus.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_hapus.Location = New System.Drawing.Point(274, 271)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(103, 46)
@@ -206,6 +221,7 @@ Partial Class FormSPP
         'btn_keluar
         '
         Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_keluar.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_keluar.Location = New System.Drawing.Point(143, 323)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(103, 46)
@@ -216,6 +232,7 @@ Partial Class FormSPP
         'btn_cari
         '
         Me.btn_cari.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_cari.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cari.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btn_cari.Location = New System.Drawing.Point(686, 15)
         Me.btn_cari.Name = "btn_cari"
@@ -241,7 +258,7 @@ Partial Class FormSPP
         Me.Controls.Add(Me.tb_cari)
         Me.Name = "FormSPP"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " "
+        Me.Text = " Pembayaran"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvSPP, System.ComponentModel.ISupportInitialize).EndInit()

@@ -4,7 +4,7 @@
         logout.Enabled = False
         data_master.Enabled = False
         data_transaksi.Enabled = False
-        laporan.Enabled = False
+
     End Sub
     Private Sub Form_MenuUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call terkonci()

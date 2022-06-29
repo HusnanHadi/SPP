@@ -39,6 +39,7 @@ Partial Class FormKelas
         'btn_simpan
         '
         Me.btn_simpan.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_simpan.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_simpan.Location = New System.Drawing.Point(12, 299)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(163, 40)
@@ -62,23 +63,26 @@ Partial Class FormKelas
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 60)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 20)
+        Me.Label2.Size = New System.Drawing.Size(85, 19)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nama Kelas"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 20)
+        Me.Label1.Size = New System.Drawing.Size(83, 19)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Kode Kelas"
         '
         'tb_namaKelas
         '
+        Me.tb_namaKelas.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_namaKelas.Location = New System.Drawing.Point(161, 57)
         Me.tb_namaKelas.Name = "tb_namaKelas"
         Me.tb_namaKelas.Size = New System.Drawing.Size(167, 26)
@@ -86,6 +90,7 @@ Partial Class FormKelas
         '
         'tb_kodeKelas
         '
+        Me.tb_kodeKelas.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tb_kodeKelas.Location = New System.Drawing.Point(161, 19)
         Me.tb_kodeKelas.Name = "tb_kodeKelas"
         Me.tb_kodeKelas.Size = New System.Drawing.Size(167, 26)
@@ -108,6 +113,7 @@ Partial Class FormKelas
         'btn_keluar
         '
         Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_keluar.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_keluar.Location = New System.Drawing.Point(181, 345)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(163, 40)
@@ -118,6 +124,7 @@ Partial Class FormKelas
         'btn_hapus
         '
         Me.btn_hapus.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_hapus.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_hapus.Location = New System.Drawing.Point(350, 299)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(163, 40)
@@ -128,6 +135,7 @@ Partial Class FormKelas
         'btn_edit
         '
         Me.btn_edit.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_edit.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_edit.Location = New System.Drawing.Point(181, 299)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(163, 40)
