@@ -11,7 +11,7 @@
             MsgBox("Semua kolom tidak boleh kosong", vbCritical, "Warning")
             tb_username.Focus()
         Else
-            If tb_username.Text = "user" And tb_password.Text = "user" Then
+            If tb_username.Text = "admin" And tb_password.Text = "admin" Then
                 Me.Close()
                 Call terbuka()
             Else

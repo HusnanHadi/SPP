@@ -17,11 +17,14 @@ Public Class FormSiswa
         tb_nis.Text = ""
         tb_nama.Text = ""
         cb_jkelamin.Text = ""
+        cb_jkelamin.ResetText()
         dtp1.ResetText()
         tb_alamat.Text = ""
         tb_telpon.Text = ""
         cb_agama.Text = ""
-        cb_thAjaran.Text = ""
+        cb_agama.ResetText()
+        cb_thMasuk.Text = ""
+        cb_thMasuk.ResetText()
         tb_kodeKelas.Text = ""
         tb_nis.Enabled = False
         tb_nama.Enabled = False
@@ -30,7 +33,7 @@ Public Class FormSiswa
         tb_telpon.Enabled = False
         tb_alamat.Enabled = False
         cb_agama.Enabled = False
-        cb_thAjaran.Enabled = False
+        cb_thMasuk.Enabled = False
         tb_kodeKelas.Enabled = False
 
         btn_simpan.Text = "Input"
@@ -62,12 +65,12 @@ Public Class FormSiswa
         cb_jkelamin.Items.Add("Laki-Laki")
         cb_jkelamin.Items.Add("Perempuan")
 
-        cb_thAjaran.Items.Add("2020")
-        cb_thAjaran.Items.Add("2021")
-        cb_thAjaran.Items.Add("2022")
-        cb_thAjaran.Items.Add("2023")
-        cb_thAjaran.Items.Add("2024")
-        cb_thAjaran.Items.Add("2025")
+        cb_thMasuk.Items.Add("2020")
+        cb_thMasuk.Items.Add("2021")
+        cb_thMasuk.Items.Add("2022")
+        cb_thMasuk.Items.Add("2023")
+        cb_thMasuk.Items.Add("2024")
+        cb_thMasuk.Items.Add("2025")
         Call kondisiawal()
     End Sub
     Sub fieldaktif()
@@ -78,7 +81,7 @@ Public Class FormSiswa
         tb_alamat.Enabled = True
         tb_telpon.Enabled = True
         cb_agama.Enabled = True
-        cb_thAjaran.Enabled = True
+        cb_thMasuk.Enabled = True
         tb_kodeKelas.Enabled = True
 
         tb_nis.Focus()
@@ -94,12 +97,12 @@ Public Class FormSiswa
 
             Call fieldaktif()
         Else
-            If tb_nis.Text = "" Or tb_nama.Text = "" Or cb_jkelamin.Text = "" Or tb_alamat.Text = "" Or tb_telpon.Text = "" Or cb_agama.Text = "" Or cb_thAjaran.Text = "" Or tb_kodeKelas.Text = "" Then
+            If tb_nis.Text = "" Or tb_nama.Text = "" Or cb_jkelamin.Text = "" Or tb_alamat.Text = "" Or tb_telpon.Text = "" Or cb_agama.Text = "" Or cb_thMasuk.Text = "" Or tb_kodeKelas.Text = "" Then
                 MsgBox("Pastikan semua kolom terisi")
             Else
                 Call koneksi()
 
-                Dim inputdata As String = "insert into tbsiswa values('" & tb_nis.Text & "','" & tb_nama.Text & "','" & cb_jkelamin.Text & "','" & Format(dtp1.Value, "yyyy-MM-dd") & "','" & tb_alamat.Text & "','" & tb_telpon.Text & "','" & cb_agama.Text & "','" & cb_thAjaran.Text & "','" & tb_kodeKelas.Text & "')"
+                Dim inputdata As String = "insert into tbsiswa values('" & tb_nis.Text & "','" & tb_nama.Text & "','" & cb_jkelamin.Text & "','" & Format(dtp1.Value, "yyyy-MM-dd") & "','" & tb_alamat.Text & "','" & tb_telpon.Text & "','" & cb_agama.Text & "','" & cb_thMasuk.Text & "','" & tb_kodeKelas.Text & "')"
                 cmd = New MySqlCommand(inputdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -125,7 +128,7 @@ Public Class FormSiswa
                 tb_alamat.Text = dr.Item("alamat")
                 tb_telpon.Text = dr.Item("telpon")
                 cb_agama.Text = dr.Item("agama")
-                cb_thAjaran.Text = dr.Item("tahun_ajaran")
+                cb_thMasuk.Text = dr.Item("tahun_masuk")
                 tb_kodeKelas.Text = dr.Item("Kode_kelas")
             Else
                 MsgBox("Data tidak ada")
@@ -141,7 +144,7 @@ Public Class FormSiswa
         tb_alamat.Text = dgvSiswa.Rows(e.RowIndex).Cells(4).Value
         tb_telpon.Text = dgvSiswa.Rows(e.RowIndex).Cells(5).Value
         cb_agama.Text = dgvSiswa.Rows(e.RowIndex).Cells(6).Value
-        cb_thAjaran.Text = dgvSiswa.Rows(e.RowIndex).Cells(7).Value
+        cb_thMasuk.Text = dgvSiswa.Rows(e.RowIndex).Cells(7).Value
         tb_kodeKelas.Text = dgvSiswa.Rows(e.RowIndex).Cells(8).Value
     End Sub
 
@@ -159,7 +162,7 @@ Public Class FormSiswa
                 MsgBox("Pastikan semua kolom terisi penuh")
             Else
                 Call koneksi()
-                Dim editdata As String = "Update tbsiswa set nama_siswa ='" & tb_nama.Text & "', jenis_kelamin ='" & cb_jkelamin.Text & "', tanggal_lahir ='" & Format(dtp1.Value, ("yyyy-MM-dd")) & "', alamat ='" & tb_alamat.Text & "', telpon ='" & tb_telpon.Text & "', agama ='" & cb_agama.Text & "', tahun_ajaran ='" & cb_thAjaran.Text & "', kode_kelas ='" & tb_kodeKelas.Text & "' Where nis ='" & tb_nis.Text & "'"
+                Dim editdata As String = "Update tbsiswa set nama_siswa ='" & tb_nama.Text & "', jenis_kelamin ='" & cb_jkelamin.Text & "', tanggal_lahir ='" & Format(dtp1.Value, ("yyyy-MM-dd")) & "', alamat ='" & tb_alamat.Text & "', telpon ='" & tb_telpon.Text & "', agama ='" & cb_agama.Text & "', tahun_masuk ='" & cb_thMasuk.Text & "', kode_kelas ='" & tb_kodeKelas.Text & "' Where nis ='" & tb_nis.Text & "'"
                 cmd = New MySqlCommand(editdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -221,4 +224,5 @@ Public Class FormSiswa
             btn_cari.PerformClick()
         End If
     End Sub
+
 End Class

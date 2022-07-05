@@ -22,6 +22,7 @@ Partial Class FormLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLogin))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tb_username = New System.Windows.Forms.TextBox()
         Me.btn_login = New System.Windows.Forms.Button()
@@ -44,17 +45,17 @@ Partial Class FormLogin
         '
         'tb_username
         '
-        Me.tb_username.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_username.Location = New System.Drawing.Point(124, 117)
+        Me.tb_username.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_username.Location = New System.Drawing.Point(124, 120)
         Me.tb_username.Name = "tb_username"
-        Me.tb_username.Size = New System.Drawing.Size(173, 26)
+        Me.tb_username.Size = New System.Drawing.Size(173, 30)
         Me.tb_username.TabIndex = 1
         '
         'btn_login
         '
         Me.btn_login.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_login.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_login.Location = New System.Drawing.Point(124, 232)
+        Me.btn_login.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_login.Location = New System.Drawing.Point(124, 246)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(173, 40)
         Me.btn_login.TabIndex = 4
@@ -64,37 +65,37 @@ Partial Class FormLogin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(120, 94)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 19)
+        Me.Label2.Size = New System.Drawing.Size(88, 22)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Username"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(120, 146)
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(120, 153)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 19)
+        Me.Label3.Size = New System.Drawing.Size(88, 22)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Password"
         '
         'tb_password
         '
-        Me.tb_password.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_password.Location = New System.Drawing.Point(124, 169)
+        Me.tb_password.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_password.Location = New System.Drawing.Point(124, 178)
         Me.tb_password.Name = "tb_password"
         Me.tb_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tb_password.Size = New System.Drawing.Size(173, 26)
+        Me.tb_password.Size = New System.Drawing.Size(173, 30)
         Me.tb_password.TabIndex = 2
         '
         'cb_tmplPassword
         '
         Me.cb_tmplPassword.AutoSize = True
         Me.cb_tmplPassword.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cb_tmplPassword.Location = New System.Drawing.Point(124, 202)
+        Me.cb_tmplPassword.Location = New System.Drawing.Point(124, 214)
         Me.cb_tmplPassword.Name = "cb_tmplPassword"
         Me.cb_tmplPassword.Size = New System.Drawing.Size(161, 23)
         Me.cb_tmplPassword.TabIndex = 3
@@ -104,8 +105,8 @@ Partial Class FormLogin
         'btn_keluar
         '
         Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_keluar.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_keluar.Location = New System.Drawing.Point(124, 278)
+        Me.btn_keluar.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_keluar.Location = New System.Drawing.Point(124, 292)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(173, 40)
         Me.btn_keluar.TabIndex = 5
@@ -117,7 +118,7 @@ Partial Class FormLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(416, 378)
+        Me.ClientSize = New System.Drawing.Size(416, 351)
         Me.Controls.Add(Me.cb_tmplPassword)
         Me.Controls.Add(Me.btn_keluar)
         Me.Controls.Add(Me.btn_login)
@@ -126,6 +127,8 @@ Partial Class FormLogin
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "FormLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"

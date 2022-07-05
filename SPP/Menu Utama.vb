@@ -27,6 +27,7 @@
     End Sub
 
     Private Sub Pembayaran_Click(sender As Object, e As EventArgs) Handles pembayaran.Click
-        FormSPP.ShowDialog()
+        FormPembayaran.ShowDialog()
     End Sub
+
 End Class
