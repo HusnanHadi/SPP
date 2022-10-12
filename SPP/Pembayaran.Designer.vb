@@ -75,7 +75,7 @@ Partial Class FormPembayaran
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(6, 216)
+        Me.Label10.Location = New System.Drawing.Point(6, 224)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(117, 22)
         Me.Label10.TabIndex = 6
@@ -85,7 +85,7 @@ Partial Class FormPembayaran
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(6, 180)
+        Me.Label9.Location = New System.Drawing.Point(6, 188)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(93, 22)
         Me.Label9.TabIndex = 6
@@ -95,7 +95,7 @@ Partial Class FormPembayaran
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 144)
+        Me.Label4.Location = New System.Drawing.Point(6, 152)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(56, 22)
         Me.Label4.TabIndex = 6
@@ -105,7 +105,7 @@ Partial Class FormPembayaran
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 108)
+        Me.Label3.Location = New System.Drawing.Point(6, 116)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(41, 22)
         Me.Label3.TabIndex = 6
@@ -115,7 +115,7 @@ Partial Class FormPembayaran
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 74)
+        Me.Label2.Location = New System.Drawing.Point(6, 82)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(124, 22)
         Me.Label2.TabIndex = 6
@@ -124,7 +124,7 @@ Partial Class FormPembayaran
         'dtp2
         '
         Me.dtp2.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtp2.Location = New System.Drawing.Point(177, 69)
+        Me.dtp2.Location = New System.Drawing.Point(177, 77)
         Me.dtp2.Name = "dtp2"
         Me.dtp2.Size = New System.Drawing.Size(182, 30)
         Me.dtp2.TabIndex = 2
@@ -133,7 +133,8 @@ Partial Class FormPembayaran
         '
         Me.cb_sppBulan.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_sppBulan.FormattingEnabled = True
-        Me.cb_sppBulan.Location = New System.Drawing.Point(177, 177)
+        Me.cb_sppBulan.Items.AddRange(New Object() {"Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember"})
+        Me.cb_sppBulan.Location = New System.Drawing.Point(177, 185)
         Me.cb_sppBulan.Name = "cb_sppBulan"
         Me.cb_sppBulan.Size = New System.Drawing.Size(182, 30)
         Me.cb_sppBulan.TabIndex = 5
@@ -142,7 +143,7 @@ Partial Class FormPembayaran
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 36)
+        Me.Label1.Location = New System.Drawing.Point(6, 44)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(135, 22)
         Me.Label1.TabIndex = 6
@@ -151,7 +152,7 @@ Partial Class FormPembayaran
         'tb_jmlhBayar
         '
         Me.tb_jmlhBayar.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_jmlhBayar.Location = New System.Drawing.Point(177, 213)
+        Me.tb_jmlhBayar.Location = New System.Drawing.Point(177, 221)
         Me.tb_jmlhBayar.Name = "tb_jmlhBayar"
         Me.tb_jmlhBayar.Size = New System.Drawing.Size(182, 30)
         Me.tb_jmlhBayar.TabIndex = 6
@@ -159,7 +160,7 @@ Partial Class FormPembayaran
         'tb_nama
         '
         Me.tb_nama.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_nama.Location = New System.Drawing.Point(177, 141)
+        Me.tb_nama.Location = New System.Drawing.Point(177, 149)
         Me.tb_nama.Name = "tb_nama"
         Me.tb_nama.Size = New System.Drawing.Size(182, 30)
         Me.tb_nama.TabIndex = 4
@@ -167,7 +168,7 @@ Partial Class FormPembayaran
         'tb_nis
         '
         Me.tb_nis.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_nis.Location = New System.Drawing.Point(177, 105)
+        Me.tb_nis.Location = New System.Drawing.Point(177, 113)
         Me.tb_nis.Name = "tb_nis"
         Me.tb_nis.Size = New System.Drawing.Size(182, 30)
         Me.tb_nis.TabIndex = 3
@@ -175,7 +176,7 @@ Partial Class FormPembayaran
         'tb_noPembayaran
         '
         Me.tb_noPembayaran.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_noPembayaran.Location = New System.Drawing.Point(177, 33)
+        Me.tb_noPembayaran.Location = New System.Drawing.Point(177, 41)
         Me.tb_noPembayaran.Name = "tb_noPembayaran"
         Me.tb_noPembayaran.Size = New System.Drawing.Size(182, 30)
         Me.tb_noPembayaran.TabIndex = 1
@@ -189,6 +190,8 @@ Partial Class FormPembayaran
         Me.dgvPembayaran.GridColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.dgvPembayaran.Location = New System.Drawing.Point(383, 56)
         Me.dgvPembayaran.Name = "dgvPembayaran"
+        Me.dgvPembayaran.ReadOnly = True
+        Me.dgvPembayaran.RowHeadersVisible = False
         Me.dgvPembayaran.RowTemplate.Height = 28
         Me.dgvPembayaran.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPembayaran.Size = New System.Drawing.Size(689, 245)
@@ -250,9 +253,9 @@ Partial Class FormPembayaran
         Me.btn_cari.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_cari.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cari.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_cari.Location = New System.Drawing.Point(686, 15)
+        Me.btn_cari.Location = New System.Drawing.Point(670, 13)
         Me.btn_cari.Name = "btn_cari"
-        Me.btn_cari.Size = New System.Drawing.Size(75, 31)
+        Me.btn_cari.Size = New System.Drawing.Size(103, 37)
         Me.btn_cari.TabIndex = 100
         Me.btn_cari.Text = "Cari"
         Me.btn_cari.UseVisualStyleBackColor = False
@@ -271,7 +274,7 @@ Partial Class FormPembayaran
         '
         Me.btn_preview.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_preview.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_preview.Location = New System.Drawing.Point(640, 307)
+        Me.btn_preview.Location = New System.Drawing.Point(670, 307)
         Me.btn_preview.Name = "btn_preview"
         Me.btn_preview.Size = New System.Drawing.Size(103, 46)
         Me.btn_preview.TabIndex = 102

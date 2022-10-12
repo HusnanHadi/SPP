@@ -28,6 +28,7 @@ Partial Class FormSiswa
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -36,6 +37,7 @@ Partial Class FormSiswa
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dtp1 = New System.Windows.Forms.DateTimePicker()
         Me.tb_kodeKelas = New System.Windows.Forms.TextBox()
+        Me.tb_namaKelas = New System.Windows.Forms.TextBox()
         Me.tb_telpon = New System.Windows.Forms.TextBox()
         Me.tb_alamat = New System.Windows.Forms.TextBox()
         Me.tb_nama = New System.Windows.Forms.TextBox()
@@ -61,6 +63,7 @@ Partial Class FormSiswa
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -69,6 +72,7 @@ Partial Class FormSiswa
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.dtp1)
         Me.GroupBox1.Controls.Add(Me.tb_kodeKelas)
+        Me.GroupBox1.Controls.Add(Me.tb_namaKelas)
         Me.GroupBox1.Controls.Add(Me.tb_telpon)
         Me.GroupBox1.Controls.Add(Me.tb_alamat)
         Me.GroupBox1.Controls.Add(Me.tb_nama)
@@ -79,7 +83,7 @@ Partial Class FormSiswa
         Me.GroupBox1.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(322, 380)
+        Me.GroupBox1.Size = New System.Drawing.Size(322, 416)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -112,6 +116,16 @@ Partial Class FormSiswa
         Me.Label9.Size = New System.Drawing.Size(104, 22)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Kode Kelas"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(6, 356)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(107, 22)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Nama Kelas"
         '
         'Label6
         '
@@ -189,6 +203,14 @@ Partial Class FormSiswa
         Me.tb_kodeKelas.Size = New System.Drawing.Size(182, 30)
         Me.tb_kodeKelas.TabIndex = 9
         '
+        'tb_namaKelas
+        '
+        Me.tb_namaKelas.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_namaKelas.Location = New System.Drawing.Point(134, 353)
+        Me.tb_namaKelas.Name = "tb_namaKelas"
+        Me.tb_namaKelas.Size = New System.Drawing.Size(182, 30)
+        Me.tb_namaKelas.TabIndex = 6
+        '
         'tb_telpon
         '
         Me.tb_telpon.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -217,6 +239,7 @@ Partial Class FormSiswa
         '
         Me.cb_thMasuk.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_thMasuk.FormattingEnabled = True
+        Me.cb_thMasuk.Items.AddRange(New Object() {"2020", "2021", "2022", "2023", "2024", "2025"})
         Me.cb_thMasuk.Location = New System.Drawing.Point(134, 281)
         Me.cb_thMasuk.Name = "cb_thMasuk"
         Me.cb_thMasuk.Size = New System.Drawing.Size(182, 30)
@@ -226,6 +249,7 @@ Partial Class FormSiswa
         '
         Me.cb_agama.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_agama.FormattingEnabled = True
+        Me.cb_agama.Items.AddRange(New Object() {"Islam", "Kristen", "Hindu", "Budha", "Kong Wu Chu"})
         Me.cb_agama.Location = New System.Drawing.Point(134, 245)
         Me.cb_agama.Name = "cb_agama"
         Me.cb_agama.Size = New System.Drawing.Size(182, 30)
@@ -235,6 +259,7 @@ Partial Class FormSiswa
         '
         Me.cb_jkelamin.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_jkelamin.FormattingEnabled = True
+        Me.cb_jkelamin.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
         Me.cb_jkelamin.Location = New System.Drawing.Point(134, 101)
         Me.cb_jkelamin.Name = "cb_jkelamin"
         Me.cb_jkelamin.Size = New System.Drawing.Size(182, 30)
@@ -257,6 +282,8 @@ Partial Class FormSiswa
         Me.dgvSiswa.GridColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.dgvSiswa.Location = New System.Drawing.Point(340, 53)
         Me.dgvSiswa.Name = "dgvSiswa"
+        Me.dgvSiswa.ReadOnly = True
+        Me.dgvSiswa.RowHeadersVisible = False
         Me.dgvSiswa.RowTemplate.Height = 28
         Me.dgvSiswa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSiswa.Size = New System.Drawing.Size(665, 285)
@@ -340,7 +367,7 @@ Partial Class FormSiswa
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1017, 406)
+        Me.ClientSize = New System.Drawing.Size(1017, 497)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.tb_cari)
         Me.Controls.Add(Me.btn_cari)
@@ -390,4 +417,6 @@ Partial Class FormSiswa
     Friend WithEvents btn_cari As Button
     Friend WithEvents tb_cari As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents tb_namaKelas As TextBox
 End Class

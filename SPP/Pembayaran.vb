@@ -56,18 +56,7 @@ Public Class FormPembayaran
         tb_noPembayaran.Focus()
     End Sub
     Private Sub FormSPP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cb_sppBulan.Items.Add("Januari")
-        cb_sppBulan.Items.Add("Februari")
-        cb_sppBulan.Items.Add("Maret")
-        cb_sppBulan.Items.Add("April")
-        cb_sppBulan.Items.Add("Mei")
-        cb_sppBulan.Items.Add("Juni")
-        cb_sppBulan.Items.Add("Juli")
-        cb_sppBulan.Items.Add("Agustus")
-        cb_sppBulan.Items.Add("September")
-        cb_sppBulan.Items.Add("Oktober")
-        cb_sppBulan.Items.Add("November")
-        cb_sppBulan.Items.Add("Desember")
+        cb_sppBulan.Text = ""
         Call kondisiawal()
     End Sub
     Private Sub tb_noPembayaran_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_noPembayaran.KeyPress
@@ -212,5 +201,17 @@ Public Class FormPembayaran
 
     Private Sub Btn_preview_Click(sender As Object, e As EventArgs) Handles btn_preview.Click
         Laporan.ShowDialog()
+    End Sub
+    Private Sub tb_jmlhBayar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_jmlhBayar.KeyPress
+        If e.KeyChar = Chr(13) Then
+            btn_simpan.PerformClick()
+        End If
+        If e.KeyChar = Chr(13) Then
+            btn_edit.PerformClick()
+        End If
+        If e.KeyChar = Chr(13) Then
+            btn_hapus.PerformClick()
+        End If
+        Call kondisiawal()
     End Sub
 End Class

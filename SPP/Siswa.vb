@@ -26,6 +26,7 @@ Public Class FormSiswa
         cb_thMasuk.Text = ""
         cb_thMasuk.ResetText()
         tb_kodeKelas.Text = ""
+        tb_namaKelas.Text = ""
         tb_nis.Enabled = False
         tb_nama.Enabled = False
         cb_jkelamin.Enabled = False
@@ -35,7 +36,7 @@ Public Class FormSiswa
         cb_agama.Enabled = False
         cb_thMasuk.Enabled = False
         tb_kodeKelas.Enabled = False
-
+        tb_namaKelas.Enabled = False
         btn_simpan.Text = "Input"
         btn_edit.Text = "Edit"
         btn_hapus.Text = "Hapus"
@@ -56,21 +57,6 @@ Public Class FormSiswa
     End Sub
     Private Sub FormSiswa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        cb_agama.Items.Add("Islam")
-        cb_agama.Items.Add("Kristen")
-        cb_agama.Items.Add("Hindu")
-        cb_agama.Items.Add("Budha")
-        cb_agama.Items.Add("Kong Wu Chu")
-
-        cb_jkelamin.Items.Add("Laki-Laki")
-        cb_jkelamin.Items.Add("Perempuan")
-
-        cb_thMasuk.Items.Add("2020")
-        cb_thMasuk.Items.Add("2021")
-        cb_thMasuk.Items.Add("2022")
-        cb_thMasuk.Items.Add("2023")
-        cb_thMasuk.Items.Add("2024")
-        cb_thMasuk.Items.Add("2025")
         Call kondisiawal()
     End Sub
     Sub fieldaktif()
@@ -83,7 +69,7 @@ Public Class FormSiswa
         cb_agama.Enabled = True
         cb_thMasuk.Enabled = True
         tb_kodeKelas.Enabled = True
-
+        tb_namaKelas.Enabled = True
         tb_nis.Focus()
     End Sub
 
@@ -97,12 +83,12 @@ Public Class FormSiswa
 
             Call fieldaktif()
         Else
-            If tb_nis.Text = "" Or tb_nama.Text = "" Or cb_jkelamin.Text = "" Or tb_alamat.Text = "" Or tb_telpon.Text = "" Or cb_agama.Text = "" Or cb_thMasuk.Text = "" Or tb_kodeKelas.Text = "" Then
+            If tb_nis.Text = "" Or tb_nama.Text = "" Or cb_jkelamin.Text = "" Or tb_alamat.Text = "" Or tb_telpon.Text = "" Or cb_agama.Text = "" Or cb_thMasuk.Text = "" Or tb_kodeKelas.Text = "" Or tb_namaKelas.Text = "" Then
                 MsgBox("Pastikan semua kolom terisi")
             Else
                 Call koneksi()
 
-                Dim inputdata As String = "insert into tbsiswa values('" & tb_nis.Text & "','" & tb_nama.Text & "','" & cb_jkelamin.Text & "','" & Format(dtp1.Value, "yyyy-MM-dd") & "','" & tb_alamat.Text & "','" & tb_telpon.Text & "','" & cb_agama.Text & "','" & cb_thMasuk.Text & "','" & tb_kodeKelas.Text & "')"
+                Dim inputdata As String = "insert into tbsiswa values('" & tb_nis.Text & "','" & tb_nama.Text & "','" & cb_jkelamin.Text & "','" & Format(dtp1.Value, "yyyy-MM-dd") & "','" & tb_alamat.Text & "','" & tb_telpon.Text & "','" & cb_agama.Text & "','" & cb_thMasuk.Text & "','" & tb_kodeKelas.Text & "','" & tb_namaKelas.Text & "')"
                 cmd = New MySqlCommand(inputdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -130,6 +116,7 @@ Public Class FormSiswa
                 cb_agama.Text = dr.Item("agama")
                 cb_thMasuk.Text = dr.Item("tahun_masuk")
                 tb_kodeKelas.Text = dr.Item("Kode_kelas")
+                tb_namaKelas.Text = dr.Item("nama_kelas")
             Else
                 MsgBox("Data tidak ada")
             End If
@@ -146,6 +133,7 @@ Public Class FormSiswa
         cb_agama.Text = dgvSiswa.Rows(e.RowIndex).Cells(6).Value
         cb_thMasuk.Text = dgvSiswa.Rows(e.RowIndex).Cells(7).Value
         tb_kodeKelas.Text = dgvSiswa.Rows(e.RowIndex).Cells(8).Value
+        tb_namaKelas.Text = dgvSiswa.Rows(e.RowIndex).Cells(9).Value
     End Sub
 
     Private Sub Btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
@@ -158,11 +146,11 @@ Public Class FormSiswa
 
             Call fieldaktif()
         Else
-            If tb_nis.Text = "" Or tb_nama.Text = "" Then
+            If tb_nis.Text = "" Or tb_nama.Text = "" Or cb_jkelamin.Text = "" Or tb_alamat.Text = "" Or tb_telpon.Text = "" Or cb_agama.Text = "" Or cb_thMasuk.Text = "" Or tb_kodeKelas.Text = "" Or tb_namaKelas.Text = "" Then
                 MsgBox("Pastikan semua kolom terisi penuh")
             Else
                 Call koneksi()
-                Dim editdata As String = "Update tbsiswa set nama_siswa ='" & tb_nama.Text & "', jenis_kelamin ='" & cb_jkelamin.Text & "', tanggal_lahir ='" & Format(dtp1.Value, ("yyyy-MM-dd")) & "', alamat ='" & tb_alamat.Text & "', telpon ='" & tb_telpon.Text & "', agama ='" & cb_agama.Text & "', tahun_masuk ='" & cb_thMasuk.Text & "', kode_kelas ='" & tb_kodeKelas.Text & "' Where nis ='" & tb_nis.Text & "'"
+                Dim editdata As String = "Update tbsiswa set nama_siswa ='" & tb_nama.Text & "', jenis_kelamin ='" & cb_jkelamin.Text & "', tanggal_lahir ='" & Format(dtp1.Value, ("yyyy-MM-dd")) & "', alamat ='" & tb_alamat.Text & "', telpon ='" & tb_telpon.Text & "', agama ='" & cb_agama.Text & "', tahun_masuk ='" & cb_thMasuk.Text & "', kode_kelas ='" & tb_kodeKelas.Text & "', nama_kelas ='" & tb_namaKelas.Text & "' Where nis ='" & tb_nis.Text & "'"
                 cmd = New MySqlCommand(editdata, con)
                 cmd.ExecuteNonQuery()
 
@@ -181,7 +169,7 @@ Public Class FormSiswa
 
             Call fieldaktif()
         Else
-            If tb_nis.Text = "" Or tb_nama.Text = "" Then
+            If tb_nis.Text = "" Or tb_nama.Text = "" Or cb_jkelamin.Text = "" Or tb_alamat.Text = "" Or tb_telpon.Text = "" Or cb_agama.Text = "" Or cb_thMasuk.Text = "" Or tb_kodeKelas.Text = "" Or tb_namaKelas.Text = "" Then
                 MsgBox("Pastika data yang akan dihapus terisi")
             Else
                 Call koneksi()
@@ -224,5 +212,30 @@ Public Class FormSiswa
             btn_cari.PerformClick()
         End If
     End Sub
+    Private Sub tb_kodeKelas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_kodeKelas.KeyPress
+        If e.KeyChar = Chr(13) Then
+            Call koneksi()
 
+            cmd = New MySqlCommand("select * from tbkelas where kode_kelas ='" & tb_kodeKelas.Text & "'", con)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows Then
+                tb_kodeKelas.Text = dr.Item("Kode_kelas")
+                tb_namaKelas.Text = dr.Item("nama_kelas")
+            Else
+                MsgBox("Data tidak ada")
+            End If
+        End If
+    End Sub
+    Private Sub tb_namaKelas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_namaKelas.KeyPress
+        If e.KeyChar = Chr(13) Then
+            btn_simpan.PerformClick()
+        End If
+        If e.KeyChar = Chr(13) Then
+            btn_edit.PerformClick()
+        End If
+        If e.KeyChar = Chr(13) Then
+            btn_hapus.PerformClick()
+        End If
+    End Sub
 End Class

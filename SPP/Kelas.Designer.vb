@@ -109,6 +109,9 @@ Partial Class FormKelas
         Me.dgvKelas.GridColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.dgvKelas.Location = New System.Drawing.Point(12, 119)
         Me.dgvKelas.Name = "dgvKelas"
+        Me.dgvKelas.ReadOnly = True
+        Me.dgvKelas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvKelas.RowHeadersVisible = False
         Me.dgvKelas.RowTemplate.Height = 28
         Me.dgvKelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvKelas.Size = New System.Drawing.Size(501, 174)

@@ -5,12 +5,12 @@ Public Class Laporan
     Dim ds As DataSet
     Private Sub Laporan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call loadlaporan()
-        Me.rpLaporan.RefreshReport()
+        Me.rvLaporan.RefreshReport()
     End Sub
     Sub loadlaporan()
-        rpLaporan.RefreshReport()
+        rvLaporan.RefreshReport()
         Dim datalaporan As ReportDataSource
-        With rpLaporan.LocalReport
+        With rvLaporan.LocalReport
             .ReportPath = ""
             .DataSources.Clear()
         End With
@@ -20,10 +20,10 @@ Public Class Laporan
         da.Fill(ds, "tbspp")
 
         datalaporan = New ReportDataSource("DataSet1", ds.Tables("tbspp"))
-        rpLaporan.LocalReport.DataSources.Add(datalaporan)
-        rpLaporan.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
+        rvLaporan.LocalReport.DataSources.Add(datalaporan)
+        rvLaporan.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
     End Sub
-    Private Sub ReportViewer1_Load(sender As Object, e As EventArgs) Handles rpLaporan.Load
+    Private Sub ReportViewer1_Load(sender As Object, e As EventArgs) Handles rvLaporan.Load
 
     End Sub
 End Class

@@ -150,4 +150,16 @@ Public Class FormKelas
         tb_kodeKelas.Text = dgvKelas.Rows(e.RowIndex).Cells(0).Value
         tb_namaKelas.Text = dgvKelas.Rows(e.RowIndex).Cells(1).Value
     End Sub
+    Private Sub tb_namaKelas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_namaKelas.KeyPress
+        If e.KeyChar = Chr(13) Then
+            btn_simpan.PerformClick()
+        End If
+        If e.KeyChar = Chr(13) Then
+            btn_edit.PerformClick()
+        End If
+        If e.KeyChar = Chr(13) Then
+            btn_hapus.PerformClick()
+        End If
+        Call kondisiawal()
+    End Sub
 End Class
